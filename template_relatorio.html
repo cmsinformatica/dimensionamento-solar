@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Relatório Solar</title>
+</head>
+<body style="font-family: Arial, sans-serif; padding: 20px;">
+    {% if LOGO_BASE64 %}
+        <div style="text-align: center; margin-bottom: 20px;">
+            <img src="data:image/png;base64,{{ LOGO_BASE64 }}" alt="Logotipo" height="80">
+        </div>
+    {% endif %}
+    <h1>Relatório Técnico - Kit Solar</h1>
+    <p><strong>Projeto:</strong> {{ NOME_PROJETO }}</p>
+    <p><strong>Localização:</strong> {{ LOCALIZACAO }}</p>
+    <p><strong>Data:</strong> {{ DATA }}</p>
+    <hr>
+    <h2>Dimensionamento</h2>
+    <ul>
+        <li>Consumo mensal: {{ CONSUMO_MENSAL }} kWh</li>
+        <li>Irradiação média: {{ IRRADIACAO }} kWh/m²/dia</li>
+        <li>Potência necessária: {{ POTENCIA_NECESSARIA }} kW</li>
+        <li>Potência ajustada (perdas): {{ POTENCIA_COM_PERDAS }} kW</li>
+        <li>Nº de módulos de {{ POTENCIA_PAINEL }}W: {{ NUM_MODULOS }}</li>
+        <li>Área total requerida: {{ AREA_TOTAL }} m²</li>
+        <li>Peso total estimado: {{ PESO_TOTAL }} kg</li>
+        <li>Inversor recomendado: entre {{ INVERSOR_MIN }} kW e {{ INVERSOR_MAX }} kW</li>
+    </ul>
+</body>
+</html>
