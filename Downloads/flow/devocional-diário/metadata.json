@@ -1,0 +1,5 @@
+{
+  "name": "Devocional Diário",
+  "description": "Uma aplicação web para fornecer um devocional diário inspirador, com título, versículo bíblico, reflexão e oração. Inclui histórico, compartilhamento e modo escuro.",
+  "requestFramePermissions": []
+}
